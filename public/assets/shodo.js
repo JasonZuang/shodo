@@ -4,13 +4,14 @@ $(document).ready(function(){
   
         var item = $('form input');
         var todo = {item: item.val()};
-  
+        console.log("asd");
         $.ajax({
           type: 'POST',
           url: '/shodo',
           data: todo,
           success: function(data){
             //do something with the data via front-end framework
+            console.log("Success");
             location.reload();
           }
         });
